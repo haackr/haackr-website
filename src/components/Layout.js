@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, data }) => {
+  console.log(data);
   return (
     <>
       <GlobalStyle />

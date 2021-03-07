@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const Hero = styled.div`
   height: 100vh;
@@ -77,6 +78,7 @@ const HomeSection = styled.div`
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Full Stack Developer" />
       <main>
         <header>
           <Hero>
@@ -98,6 +100,7 @@ const IndexPage = () => {
                 layout="constrained"
                 aspectRatio="1"
                 className="profile-image"
+                alt="Ryan Haack"
               />
               <p>
                 I'm a full stack developer from Albuquerque, New Mexico. I've
