@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Haackr Website",
+    title: "Ryan Haack | Full Stack Developer",
+    siteUrl: "https://haackr.com",
   },
   plugins: [
     "gatsby-plugin-styled-components",
