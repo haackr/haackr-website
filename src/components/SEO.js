@@ -14,18 +14,47 @@ const query = graphql`
   }
 `;
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, description, isArticle, meta = [] }) => {
   const { site } = useStaticQuery(query);
+
+  const metaTitle = title
+    ? `${site.siteMetadata.title} | ${title}`
+    : site.siteMetadata.title;
 
   return (
     <Helmet
-      title={
-        title
-          ? `${site.siteMetadata.title} | ${title} `
-          : site.siteMetadata.title
-      }
-      description={description ? description : site.siteMetadata.description}
+      title={metaTitle}
       htmlAttributes={{ lang: `en` }}
+      meta={[
+        {
+          name: "description",
+          content: description || site.siteMetadata.description,
+        },
+        {
+          property: "og:title",
+          content: metaTitle,
+        },
+        {
+          property: "og:description",
+          content: description || site.siteMetadata.description,
+        },
+        {
+          property: "og:type",
+          content: isArticle ? "article" : "website",
+        },
+        {
+          property: "twitter:title",
+          content: metaTitle,
+        },
+        {
+          property: "twitter:creator",
+          content: site.siteMetadata.twitter,
+        },
+        {
+          property: "twitter:description",
+          content: description || site.siteMetadata.description,
+        },
+      ].concat(meta)}
     />
   );
 };

@@ -57,5 +57,18 @@ module.exports = {
       },
       __key: "posts",
     },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-ELM66FKX08"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+        },
+      },
+    },
   ],
 };

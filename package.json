@@ -22,6 +22,7 @@
     "fontsource-work-sans": "^4.0.0",
     "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
+    "gatsby-plugin-google-gtag": "^3.0.0",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-mdx": "^2.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
