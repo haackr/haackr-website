@@ -1,3 +1,5 @@
+const { lazy } = require("react");
+
 module.exports = {
   siteMetadata: {
     title: "Ryan Haack",
@@ -12,7 +14,23 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 900,
+              quality: 100,
+              withWebp: true,
+              withAvif: true,
+              loading: "lazy",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -30,6 +48,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/posts/",
+      },
+      __key: "posts",
     },
   ],
 };

@@ -25,6 +25,7 @@ const SEO = ({ title, description }) => {
           : site.siteMetadata.title
       }
       description={description ? description : site.siteMetadata.description}
+      htmlAttributes={{ lang: `en` }}
     />
   );
 };

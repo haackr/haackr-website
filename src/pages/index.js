@@ -5,15 +5,15 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 const Hero = styled.div`
-  height: 100vh;
+  height: 75vh;
   display: flex;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   line-height: 1.5;
   padding: 2rem;
 
   .name {
-    font-weight: bolder;
+    font-weight: 600;
     text-decoration: underline;
     color: #3297ae;
   }
@@ -21,6 +21,7 @@ const Hero = styled.div`
   h1 {
     margin-top: 25vh;
     font-size: 1.5rem;
+    font-weight: 400;
   }
 
   @media screen and (min-width: 500px) {
@@ -31,7 +32,7 @@ const Hero = styled.div`
 `;
 
 const HomeSection = styled.div`
-  max-width: 800px;
+  max-width: 900px;
   padding: 2rem;
   margin: auto;
 
@@ -43,8 +44,9 @@ const HomeSection = styled.div`
   p {
     line-height: 1.6;
     color: #333;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
+    text-align: left;
   }
 
   .profile-image {
@@ -57,11 +59,12 @@ const HomeSection = styled.div`
     flex-direction: column;
     align-items: center;
 
-    & .profile-image {
-    }
-
     @media (min-width: 800px) {
       flex-direction: row-reverse;
+      .profile-image {
+        margin-left: 1.5rem;
+        flex-shrink: 0;
+      }
     }
   }
 
@@ -101,13 +104,17 @@ const IndexPage = () => {
                 aspectRatio="1"
                 className="profile-image"
                 alt="Ryan Haack"
+                loading="eager"
+                quality={100}
               />
               <p>
                 I'm a full stack developer from Albuquerque, New Mexico. I've
                 been programming since I was a kid messing around with BASIC.
-                I'm currently employed at Albuquerque Public Schools doing some
-                custom software development and administration of our capital
-                project management software e-Builder. In my free time I enjoy
+                These days I mostly focus on javascript technologies like React
+                and Node.js. I'm currently employed at Albuquerque Public
+                Schools doing administration of our capital project management
+                software (e-Builder) and a bit of software development. I do
+                freelance web development on the side. In my free time I enjoy
                 hiking, climbing, backpacking, playing guitar, and cooking.
               </p>
             </div>
