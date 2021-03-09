@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import ContactForm from "../components/ContactForm";
 
 const Hero = styled.div`
   height: 75vh;
@@ -122,10 +123,7 @@ const IndexPage = () => {
         </article>
         <HomeSection>
           <h2>Contact Me</h2>
-          <p>
-            I'd love to help you build your project! Shoot me an email at{" "}
-            <a href="mailto:ryan@haackr.com">ryan@haackr.com</a>.
-          </p>
+          <ContactForm />
         </HomeSection>
       </main>
     </Layout>
