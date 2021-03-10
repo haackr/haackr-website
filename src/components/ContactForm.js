@@ -15,7 +15,7 @@ const Form = styled.form`
     resize: none;
   }
   #submit {
-    background: #3297ae;
+    background: var(--primary-color);
     border: none;
     color: #fff;
     padding: 0.6rem;
@@ -24,7 +24,7 @@ const Form = styled.form`
     margin-top: 1rem;
     cursor: pointer;
     :hover {
-      background: #256e7e;
+      background: var(--primary-alt);
     }
   }
 `;
