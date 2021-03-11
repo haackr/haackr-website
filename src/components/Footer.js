@@ -6,6 +6,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaStrava,
+  FaInstagram,
 } from "react-icons/fa";
 import { GrGatsbyjs } from "react-icons/gr";
 
@@ -19,6 +20,11 @@ const SOCIAL_LINKS = [
     title: "Twitter",
     link: "https://twitter.com/rhaack",
     icon: <FaTwitter />,
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/ryguynm/",
+    icon: <FaInstagram />,
   },
   {
     title: "Github",
