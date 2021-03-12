@@ -110,7 +110,6 @@ const Footer = () => {
             </span>
           </a>
         </p>
-        <p className="subtle">© Ryan Haack</p>
       </div>
     </FooterStyles>
   );
