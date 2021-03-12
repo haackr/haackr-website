@@ -9,17 +9,20 @@ const query = graphql`
         title
         twitter
         description
+        siteUrl
       }
     }
   }
 `;
 
-const SEO = ({ title, description, isArticle, meta = [] }) => {
+const SEO = ({ title, description, isArticle, image, imageAlt, meta = [] }) => {
   const { site } = useStaticQuery(query);
 
   const metaTitle = title
     ? `${site.siteMetadata.title} | ${title}`
     : site.siteMetadata.title;
+
+  const imageUrl = `${site.siteMetadata.siteUrl}${image}`;
 
   return (
     <Helmet
@@ -54,7 +57,39 @@ const SEO = ({ title, description, isArticle, meta = [] }) => {
           property: "twitter:description",
           content: description || site.siteMetadata.description,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          image
+            ? [
+                {
+                  name: "og:image",
+                  content: imageUrl,
+                },
+                {
+                  name: "og:image:alt",
+                  content: imageAlt || title,
+                },
+                {
+                  name: "twitter:image",
+                  content: imageUrl,
+                },
+                {
+                  name: "twitter:image:alt",
+                  content: imageAlt || title,
+                },
+                {
+                  name: "twitter:card",
+                  content: `summary_large_image`,
+                },
+              ]
+            : [
+                {
+                  property: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     />
   );
 };
