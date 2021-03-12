@@ -14,7 +14,6 @@ const PostItem = styled.li`
   }
   .date {
     color: #999;
-    font-style: italic;
     font-size: 0.8rem;
   }
 `;
@@ -28,7 +27,7 @@ const PostListItem = ({ post }) => {
           <h2>{post.frontmatter.title}</h2>
         </Link>
         <div className="date">
-          {post.frontmatter.date} | {post.timeToRead} min read
+          {post.frontmatter.date} • {post.timeToRead} min read
         </div>
       </div>
     </PostItem>
