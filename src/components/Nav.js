@@ -47,7 +47,7 @@ const NavStyle = styled.nav`
 `;
 
 const Nav = ({ location }) => {
-  console.log(location);
+  // console.log(location);
   return (
     <NavStyle>
       <Link to="/" className="logo">
