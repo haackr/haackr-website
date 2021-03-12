@@ -62,23 +62,23 @@ const SEO = ({ title, description, isArticle, image, imageAlt, meta = [] }) => {
           image
             ? [
                 {
-                  name: "og:image",
+                  property: "og:image",
                   content: imageUrl,
                 },
                 {
-                  name: "og:image:alt",
+                  property: "og:image:alt",
                   content: imageAlt || title,
                 },
                 {
-                  name: "twitter:image",
+                  property: "twitter:image",
                   content: imageUrl,
                 },
                 {
-                  name: "twitter:image:alt",
+                  property: "twitter:image:alt",
                   content: imageAlt || title,
                 },
                 {
-                  name: "twitter:card",
+                  property: "twitter:card",
                   content: `summary_large_image`,
                 },
               ]
