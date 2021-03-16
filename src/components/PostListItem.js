@@ -35,7 +35,9 @@ const PostListItem = ({ post }) => {
           {post.frontmatter.date} • {post.timeToRead} min read
         </div>
       </div>
-      <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
+      <Link to={`/blog/${post.frontmatter.slug}`}>
+        <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
+      </Link>
     </PostItem>
   );
 };
