@@ -37,7 +37,7 @@ export const pageQuery = graphql`
 `;
 
 const BlogPost = styled.article`
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
   margin-top: 5vh;
   padding: 1rem;
