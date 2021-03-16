@@ -20,7 +20,7 @@ export const PageQuery = graphql`
                 placeholder: BLURRED
                 layout: CONSTRAINED
                 aspectRatio: 4
-                transformOptions: { fit: COVER }
+                transformOptions: { fit: COVER, cropFocus: CENTER }
               )
             }
           }
