@@ -81,7 +81,7 @@ const BlogPost = styled.article`
     .by-image {
       border-radius: 50%;
       margin-right: 1rem;
-      border: 0.15rem solid var(--primary-color);
+      /* border: 0.15rem solid var(--primary-color); */
     }
     .by-name {
       margin-right: 0.5rem;
