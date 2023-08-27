@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 
 const Hero = styled.div`
@@ -44,6 +45,33 @@ const HomeSection = styled.div`
     max-width: 400px;
     margin: auto;
   }
+
+  .profile-image {
+    border-radius: 100%;
+    margin: 1rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .profile-image {
+    }
+
+    @media (min-width: 800px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (min-width: 600px) {
+    p {
+      font-size: 1.1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 const IndexPage = () => {
@@ -63,14 +91,23 @@ const IndexPage = () => {
         <article>
           <HomeSection>
             <h2>About Me</h2>
-            <p>
-              I'm a full stack developer from Albuquerque, New Mexico. I've been
-              programming since I was a kid messing around with BASIC. I'm
-              currently employed at Albuquerque Public Schools doing some custom
-              software development and administration of our capital project
-              management software e-Builder. In my free time I enjoy hiking,
-              climbing, backpacking, playing guitar, and cooking.
-            </p>
+            <div className="about-content">
+              <StaticImage
+                src="../images/me.jpg"
+                width={200}
+                layout="constrained"
+                aspectRatio="1"
+                className="profile-image"
+              />
+              <p>
+                I'm a full stack developer from Albuquerque, New Mexico. I've
+                been programming since I was a kid messing around with BASIC.
+                I'm currently employed at Albuquerque Public Schools doing some
+                custom software development and administration of our capital
+                project management software e-Builder. In my free time I enjoy
+                hiking, climbing, backpacking, playing guitar, and cooking.
+              </p>
+            </div>
           </HomeSection>
         </article>
         <HomeSection>
