@@ -36,7 +36,7 @@ const ContactForm = () => {
 
   return (
     <Form action="https://submit-form.com/HRaGkdV5">
-      <input type="hidden" name="_redirect" value="https://haackr.com/thanks" />
+      <input type="hidden" name="_redirect" value="https://haackr.dev/thanks" />
       <input type="hidden" name="_append" value="false" />
       <label htmlFor="name">Name:</label>
       <input

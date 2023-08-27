@@ -3,8 +3,7 @@ const { lazy } = require("react");
 module.exports = {
   siteMetadata: {
     title: "Ryan Haack",
-    siteUrl: "https://haackr.com",
-    twitter: "@rhaack",
+    siteUrl: "https://haackr.dev",
     description:
       "Ryan Haack is a full stack web developer from Albuquerque, NM. He makes websites and web apps using modern technologies like React and Node.js. He ♥'s JAMstack.",
   },
