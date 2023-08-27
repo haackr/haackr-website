@@ -71,7 +71,7 @@ const Post = ({ data }) => {
   console.log(bannerImage);
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={post.frontmatter.title} isArticle={true} />
       <BannerImage>
         {bannerImage && (
           <GatsbyImage
