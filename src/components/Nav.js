@@ -29,7 +29,7 @@ const NavStyle = styled.nav`
   .logo {
     font-size: 1.4rem;
     font-weight: bolder;
-    color: #3297ae;
+    color: var(--primary-color);
   }
 
   .logo .company {

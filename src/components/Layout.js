@@ -8,6 +8,11 @@ import Nav from "./Nav";
 import CodeBlock from "../components/CodeBlock";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --primary-color: #3297ae;
+    --primary-alt: #256e7e;
+  }
+  
   * {
     margin: 0;
     padding: 0;
@@ -25,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #3297ae;
+    color: var(--primary-color);
   }
 `;
 

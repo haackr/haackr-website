@@ -16,7 +16,7 @@ const Hero = styled.div`
   .name {
     font-weight: 600;
     text-decoration: underline;
-    color: #3297ae;
+    color: var(--primary-color);
   }
 
   h1 {

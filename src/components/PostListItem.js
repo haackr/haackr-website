@@ -9,7 +9,7 @@ const PostItem = styled.li`
   }
 
   h2 {
-    color: #3297ae;
+    color: var(--primary-color);
     font-weight: 400;
   }
   .date {
