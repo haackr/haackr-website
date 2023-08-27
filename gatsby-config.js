@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Ryan Haack",
     siteUrl: "https://haackr.dev",
+    twitter: "rhaack",
     description:
       "Ryan Haack is a full stack web developer from Albuquerque, NM. He makes websites and web apps using modern technologies like React and Node.js. He ♥'s JAMstack.",
   },
