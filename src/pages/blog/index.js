@@ -13,6 +13,18 @@ export const PageQuery = graphql`
           title
           slug
           date(formatString: "MMMM Do, YYYY")
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                quality: 80
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                aspectRatio: 4
+                transformOptions: { fit: COVER }
+              )
+            }
+          }
+          imageAlt
         }
         timeToRead
         id
