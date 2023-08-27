@@ -21,6 +21,7 @@ const Form = styled.form`
     padding: 0.6rem;
     font-size: 1.3rem;
     max-width: 200px;
+    margin-top: 1rem;
     cursor: pointer;
     :hover {
       background: #256e7e;
@@ -33,19 +34,10 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   return (
-    <Form
-      method="POST"
-      action="https://submit-form.com/HRaGkdV5"
-      onSubmit={handleSubmit}
-    >
+    <Form action="https://submit-form.com/HRaGkdV5">
+      <input type="hidden" name="_redirect" value="https://haackr.com/thanks" />
+      <input type="hidden" name="_append" value="false" />
       <label htmlFor="name">Name:</label>
       <input
         type="text"
