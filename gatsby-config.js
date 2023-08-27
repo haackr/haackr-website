@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: "https://haackr.com",
     twitter: "@rhaack",
     description:
-      "Ryan Haack is a full stack web developer from Albuquerque, NM.",
+      "Ryan Haack is a full stack web developer from Albuquerque, NM. He makes websites and web apps using modern technologies like React and Node.js. He ♥'s JAMstack.",
   },
   plugins: [
     "gatsby-plugin-styled-components",

@@ -1,7 +1,12 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  getImage,
+  StaticImage,
+  getSrc,
+} from "gatsby-plugin-image";
 import styled from "styled-components";
 import Layout from "../../components/Layout.js";
 import SEO from "../../components/SEO.js";
@@ -23,6 +28,7 @@ export const pageQuery = graphql`
           }
         }
         imageAlt
+        description
       }
       body
       timeToRead
@@ -124,10 +130,17 @@ const BannerImage = styled.div`
 const Post = ({ data }) => {
   const post = data.mdx;
   const bannerImage = getImage(post.frontmatter.image);
+  const seoImg = getSrc(post.frontmatter.image);
   console.log(bannerImage);
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} isArticle={true} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        isArticle={true}
+        image={seoImg}
+        imageAlt={post.frontmatter.imageAlt}
+      />
       <BannerImage>
         {bannerImage && (
           <GatsbyImage

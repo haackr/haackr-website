@@ -82,7 +82,7 @@ const HomeSection = styled.div`
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Full Stack Developer" />
+      <SEO title="Full Stack Web Developer" />
       <main>
         <header>
           <Hero>
