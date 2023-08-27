@@ -5,7 +5,7 @@ import "fontsource-work-sans";
 import "fontsource-work-sans/600.css";
 import "fontsource-poppins";
 import Nav from "./Nav";
-import CodeBlock from "../components/CodeBlock";
+import CodeBlock, { InlineCode } from "../components/CodeBlock";
 import Footer from "./Footer";
 
 const GlobalStyle = createGlobalStyle`
@@ -40,10 +40,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Layout = ({ children, data }) => {
-  console.log(data);
+  // console.log(data);
 
   const components = {
     pre: CodeBlock,
+    inlineCode: InlineCode,
   };
   return (
     <>

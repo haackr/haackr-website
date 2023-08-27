@@ -1,7 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Layout from "../../components/Layout.js";
 import SEO from "../../components/SEO.js";
@@ -16,7 +16,7 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
-              layout: CONSTRAINED
+              layout: FULL_WIDTH
               placeholder: BLURRED
               quality: 80
             )
@@ -37,26 +37,76 @@ const BlogPost = styled.article`
   padding: 1rem;
   line-height: 1.6;
   h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: 400;
     font-size: 2rem;
+    line-height: 1.1;
+    @media (min-width: 600px) {
+      font-size: 2.5rem;
+    }
+  }
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
   }
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   p,
   pre {
     margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
   .post_info {
-    font-style: italic;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #999;
     padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    .by-image {
+      border-radius: 100%;
+      margin-right: 1rem;
+      border: 2px solid var(--primary-color);
+    }
+    .by-name {
+      margin-right: 0.5rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+    margin: 2rem auto;
+    border: 2px solid var(--primary-color);
+  }
+  thead tr {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: left;
+    th {
+      font-weight: normal;
+    }
+  }
+  th,
+  td {
+    padding: 0.5rem 0.7rem;
+  }
+  tbody tr {
+    border-bottom: 1px solid #dddddd;
+    :nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
   }
 `;
 
@@ -84,7 +134,20 @@ const Post = ({ data }) => {
       <BlogPost>
         <h1>{post.frontmatter.title}</h1>
         <div className="post_info">
-          {post.frontmatter.date} | {post.timeToRead} min read
+          <Link to="/" title="Ryan Haack">
+            <StaticImage
+              src="../../images/me.jpg"
+              width={40}
+              quality={60}
+              layout="constrained"
+              alt="Ryan Haack"
+              className="by-image"
+            />
+          </Link>{" "}
+          <span className="by-name">
+            <Link to="/">Ryan Haack</Link>
+          </span>{" "}
+          {post.frontmatter.date} • {post.timeToRead} min read
         </div>
         <MDXRenderer>{post.body}</MDXRenderer>
       </BlogPost>
