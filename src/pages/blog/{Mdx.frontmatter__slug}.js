@@ -77,10 +77,11 @@ const BlogPost = styled.article`
     padding-bottom: 1rem;
     display: flex;
     align-items: center;
+    line-height: 1;
     .by-image {
-      border-radius: 100%;
+      border-radius: 50%;
       margin-right: 1rem;
-      border: 2px solid var(--primary-color);
+      border: 0.15rem solid var(--primary-color);
     }
     .by-name {
       margin-right: 0.5rem;
@@ -157,7 +158,7 @@ const Post = ({ data }) => {
             <StaticImage
               src="../../images/me.jpg"
               width={40}
-              quality={60}
+              quality={100}
               layout="constrained"
               alt="Ryan Haack"
               className="by-image"
