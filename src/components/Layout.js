@@ -6,6 +6,7 @@ import "fontsource-work-sans/600.css";
 import "fontsource-poppins";
 import Nav from "./Nav";
 import CodeBlock from "../components/CodeBlock";
+import Footer from "./Footer";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -32,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: var(--primary-color);
   }
+
+  .top-content {
+    min-height: 100vh;
+  }
 `;
 
 const Layout = ({ children, data }) => {
@@ -44,8 +49,11 @@ const Layout = ({ children, data }) => {
     <>
       <MDXProvider components={components}>
         <GlobalStyle />
-        <Nav />
-        {children}
+        <div className="top-content">
+          <Nav />
+          {children}
+        </div>
+        <Footer />
       </MDXProvider>
     </>
   );
