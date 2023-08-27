@@ -41,6 +41,13 @@ const BlogPost = styled.article`
     font-weight: 400;
     font-size: 2rem;
   }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 2rem;
+  }
   p,
   pre {
     margin-bottom: 2rem;
