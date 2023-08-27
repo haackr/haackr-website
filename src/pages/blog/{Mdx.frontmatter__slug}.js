@@ -66,7 +66,7 @@ const BlogPost = styled.article`
     font-size: 1.2rem;
   }
   .post_info {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #999;
     padding-bottom: 1rem;
     display: flex;
@@ -82,6 +82,9 @@ const BlogPost = styled.article`
         text-decoration: none;
       }
     }
+    @media (min-width: 600px) {
+      font-size: 1rem;
+    }
   }
   table {
     border-collapse: collapse;
@@ -89,6 +92,9 @@ const BlogPost = styled.article`
     min-width: 400px;
     margin: 2rem auto;
     border: 2px solid var(--primary-color);
+    @media (max-width: 450px) {
+      min-width: 0;
+    }
   }
   thead tr {
     background-color: var(--primary-color);
