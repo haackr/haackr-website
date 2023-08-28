@@ -109,14 +109,10 @@ const IndexPage = () => {
                 quality={100}
               />
               <p>
-                I'm a full stack developer from Albuquerque, New Mexico. I've
+                I'm a full stack developer and PMIS consultant from Albuquerque, New Mexico. I've
                 been programming since I was a kid messing around with BASIC.
-                These days I mostly focus on javascript technologies like React
-                and Node.js. I'm currently employed at Albuquerque Public
-                Schools doing administration of our capital project management
-                software (e-Builder) and a bit of software development. I do
-                freelance web development on the side. In my free time I enjoy
-                hiking, climbing, backpacking, playing guitar, and cooking.
+                I'm currently employed at Avicado Construction Technology Services as a Senior Consultant. 
+                In my free time I enjoy hiking, climbing, backpacking, playing guitar, and cooking.
               </p>
             </div>
           </HomeSection>
