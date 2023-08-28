@@ -89,7 +89,7 @@ const IndexPage = () => {
             <div>
               <h1>
                 Hi, I'm <span className="name">Ryan Haack</span>. <br />
-                I'm a full stack developer & e-Builder administrator.
+                I'm a full stack developer & PMIS consultant.
               </h1>
             </div>
           </Hero>
